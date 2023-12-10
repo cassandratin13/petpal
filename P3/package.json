@@ -1,4 +1,9 @@
-{
+{"scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
   "dependencies": {
     "bootstrap": "^5.0.0",
     "bootstrap-icons": "^1.11.2",
