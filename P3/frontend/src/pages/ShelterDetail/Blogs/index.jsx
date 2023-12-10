@@ -91,6 +91,10 @@ const Blogs = () => {
     const handlePageChange = (newPage) => {
       setCurrentPage(newPage);
     };
+
+    const handleViewClick = (blogId) => {
+      navigate(`/blog-view/${blogId}`);
+    };
   
     return (
       <div className="container justify-content-start text-start">
@@ -105,10 +109,10 @@ const Blogs = () => {
               </p>
             </div>
             <div className="button-container">
-              <button className="blog-button blog-delete" onClick={() => handleDelete(blog.id)}>View</button>
-              {userType === "Seeker" && (
-                  <button className="blog-button blog-delete" onClick={() => handleDelete(blog.id)}>Like</button>
-              )}
+              <button className="blog-button blog-view" onClick={() => handleViewClick(blog.id)}>Read</button>
+              {/* {userType === "Seeker" && (
+                  <button className="blog-button blog-like" >Like</button>
+              )} */}
               
             </div>
           </div>
